@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import * as moment from 'moment';
+import { Observable, timer } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  title = 'kabob-todolist';
+  currentTime$: Observable<string> = timer(0, 1000).pipe(
+    map(() => moment().format('YYYY-MM-DD HH:mm:ss'))
+  );
 }
