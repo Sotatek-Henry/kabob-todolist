@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kabob-todolist"
+    }
+  },
+  "defaultProject": "kabob-todolist",
+  "cli": {
+    "analytics": "a79c15e6-69d3-4d95-87f0-68c835029e91"
+  }
 }
