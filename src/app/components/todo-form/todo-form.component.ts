@@ -29,6 +29,5 @@ export class TodoFormComponent {
 
     // reset to init state
     this.todoForm.reset();
-    debugger;
   }
 }

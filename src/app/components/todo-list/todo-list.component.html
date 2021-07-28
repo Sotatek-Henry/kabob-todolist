@@ -1,1 +1,21 @@
-<p>todo-list works!</p>
+<ul class="list-group">
+  <li
+    *ngFor="let todo of todos$ | async; trackBy: trackByFn"
+    class="
+      list-group-item
+      d-flex
+      align-items-center
+      justify-content-between
+      checkbox-wrapper
+    "
+    [ngClass]="{ active: todo.selected }"
+    (click)="toggleSelect(todo)"
+  >
+    <div class="d-flex align-items-center">
+      <span class="custom-checkbox border w-2 h-2"></span>
+      <span class="d-inline-block pl-2">{{ todo.name }}</span>
+    </div>
+
+    <button class="btn btn-outline-danger" (click)="remove(todo)">x</button>
+  </li>
+</ul>
